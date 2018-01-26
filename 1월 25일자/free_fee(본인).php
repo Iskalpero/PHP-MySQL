@@ -17,7 +17,7 @@
 		
 	(조건, 입력받는 이름들은, 해당 테이블내에 존재하는 이름과 레코드 갯수에 한정한다.)
 	
-	
+	*/
 	
 	
 	
@@ -37,8 +37,10 @@
 	}
 	echo("r_db 데이터베이스 선택 완료<br>");	
 
-	
-	*/
+	<form method="get">
+		이름 : <input type = "text" /></br>
+		<input type="submit" value="검색" />
+	</form>
 	
 
 	/*
