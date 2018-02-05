@@ -27,9 +27,17 @@
 		c언어나 자바처럼 int형식은 int로 리턴해야한다 와 같은 법칙을 무시해도 된다.
 		하지만 인지만 하고 하는습관은 c언어나 자바처럼 조건에 맞춰 하는것에 길들여져야 한다.	
 		
+	
+		추가 팁
 		
+		
+		SQL문에서 중복된 데이터를 제거하는 구문
+		
+		DELETE FROM duplicate
+		WHERE id not in ( SELECT id from ( SELECT id from duplicate group by phone) as id )
+		http://gyuha.tistory.com/309
+		https://iwordpower.com/2017/03/how-to-delete-duplicate-records-in-mysql/ 
 		*/
-		
 		return ($a*$b);
 		
 	}
