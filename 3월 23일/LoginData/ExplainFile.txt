@@ -1,0 +1,19 @@
+Login.html
+
+// Login Main Screen and transfer id/pw data to login_sucess.php
+// 로그인 메인화면, id/pw를 입력한 값을 login_success.php로 전송시켜준다.
+// 회원가입까지.
+
+Join.php 
+
+//Member join
+// 회원가입
+
+Join_processing.php
+
+// join.php의 가입내용을 서버에 등록시킨 후 다시 로그인 메인화면으로
+
+
+login_success.php
+
+// 로그인 성공/실패여부를 출력시켜준다.
