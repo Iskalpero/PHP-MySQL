@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>회원가입 양식(샘플)</title>
+	</head>
+	
+	
+	<body>
+		<h1> 가 입 양 식 </h1>
+		<form name="member_form" action="./insert.php" method="post">
+			<table width="100%" border="1">
+				<tr>
+					<th><span style="color:red">*</span>아이디</th>
+					<td>
+						<input type="text" size="12" maxlength="12" name="id" required autofocus placeholder="아이디 입력">
+						<input type="button" value="아이디 중복체크" onclick="alert('사용할 수 있는 아이디입니다.')">
+					</td>
+				</tr>
+				<tr>
+					<th><span style="color:red">*</span>비밀번호</th>
+					<td>
+						<input type="password" size="10" maxlength="10" required name="passwd" placeholder="비밀번호는 10자리까지">	
+					</td>
+				</tr>
+				<tr>
+					<th><span style="color:red">*</span>비밀번호 확인</th>
+					<td>
+						<input type="password" size="10" maxlength="10" required name="passwd_confirm" placeholder="비밀번호 재입력">	
+					</td>
+				</tr>
+				<tr>
+					<th><span style="color:red">*</span>이름</th>
+					<td>
+						<input type="text" size="10" maxlength="10" required name="name">	
+					</td>
+				</tr>
+				<tr>
+					<th><span style="color:red">*</span>성별</th>
+					<td>
+						<input type = radio name=sex value="M" checked>남
+						<input type = radio name=sex value="W">여
+					</td>
+				</tr>
+				<tr>
+					<th>휴대전화</th>
+					<td>
+						<select name="phone1">
+							<option disabled >선택</option>
+							<option selected>010</option>
+							<option >011</option>
+							<option >017</option>
+							<option >018</option>
+						</select>
+						- <input type="number" step="1" size="4" maxlength="4" minlength="3" name="phone2">
+						- <input type="number" size="4" max="9999" min="0"  name="phone3">
+						<!-- 숫자만 입력시키기 위해서는 type="number"와 step="1"(숫자 간격명령어) 설정이 필요하다. 이유는 모른다. -->
+						<!-- 4자리수로 하려면 max & min으로 범위를 조절하면 된다. ex) min=0; max=9999;-->
+					</td>
+		<!-- 여기서 휴대번호에 숫자만 입력되도록 해야된다는 자바스크립트 써야됨-->
+				</tr>
+				<tr>
+					<th>주소</th>
+					<td>
+						<input type="text" size="50" maxlength="90" name="address">
+					</td>
+				</tr>
+				<tr>
+					<th>처리</th>
+					<td>
+						<input type="submit" value="가입완료">
+						<input type="reset" value="재작성">
+					</td>
+				</tr>
+			</table>
+		</form>	
+	</body>
+
+</html>

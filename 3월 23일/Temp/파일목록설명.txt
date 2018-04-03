@@ -1,0 +1,23 @@
+[테이블 내용을 목록으로 출력]
+- mysql_client2_array.php 
+(client 테이블의 레코드를 목록으로 출력,수정/삭제/입력 기능)
+
+[테이블에 내용을 추가]
+- mysql_client2_form.php
+(client 테이블에 새로운 레코드를 추가하기 위해 사용하는 입력양식 폼)
+
+- mysql_client2_forminput.php
+( 입력양식폼(mysql_client2_form.php)에서 전송된 값을 client 테이블에 저장)
+
+[테이블에서 내용을 삭제]
+- mysql_client2_del.php
+(client 테입블에서 선택(where 조건)된 레코드를 검색하여 삭제)
+
+[테이블에서 내용을 수정]
+- mysql_client2_mform.php
+( 테이블목록(mysql_client2_array.php)에서 
+선택된 레코드내용 수정하기 위해 사용하는 수정양식 폼)
+
+- mysql_client2_mforminput.php
+(수정양식폼(mysql_client2_mform.php)으로 부터 수정된 값을 받아
+ client 테이블에 있는 해당 레코드를 수정(update)함)
