@@ -1,0 +1,8 @@
+[php notice 안보이게 하기]
+
+php.ini 파일을 연다.
+
+error_reporting 검색으로 아래  문장을 찾고 (중간보다 약간 상단에 있음)
+error_reporting = E_ALL & ~E_NOTICE   와 같이 바꿔준다.
+
+그리고서 아파치 재시작.

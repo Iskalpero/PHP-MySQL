@@ -2,7 +2,8 @@
 	
 	session_start();
 	// 세션 시작
-
+	
+	
 ?>
 
 
@@ -44,7 +45,7 @@
 	if($_SESSION['userid']){ // 회원가입 -> 회원정보 변경.
 ?>
 				<td>
-					<a href="./member_mfrom.html" target="main">
+					<a href="./member_mform.php" target="main">
 					<img src="images/btn_modmem.png"></a>
 				</td>
 <?php
@@ -53,14 +54,15 @@
 					<td><a href="./member_form.html" target="main"><img src="images/btn_addmem.png"></a></td>
 					
 <?php
+		
 	} // else문 종료.
 ?> 
 					<td><a href="./guestbook/guestbook.php" target="main"><img src="images/btn_vbook.png"></a></td>
-					<td><a href="" target="main"><img src="images/btn_board.png"></a></td>
-					<td><a href="" target="main"><img src="images/btn_notice.png"></a></td>
-					<td><a href="callanderex.php" target="main"><img src="images/btn_qna.png"></a></td>
-					<td><a href="" target="main"><img src="images/btn_dboard.png"></a></td>
-					<td><a href="" target="main"><img src="images/btn_qboard.png"></a></td>
+					<td><a href="./freeboard/list.php" target="main"><img src="images/btn_board.png"></a></td>
+					<td><a href="./notice/list.php" target="main"><img src="images/btn_notice.png"></a></td>
+					<td><a href="./qna/list.php" target="main"><img src="images/btn_qna.png"></a></td>
+					<td><a href="./download/list.php" target="main"><img src="images/btn_dboard.png"></a></td>
+					<td><a href="./survey/survey.php" target="main"><img src="images/btn_qboard.png"></a></td>
 				</tr>			
 			</table>
 		</td>

@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+		<title>회원가입양식</title>
+	</head>
+	<body>
+	   <h1>*회원가입*</h1>
+		 <form name="member_form" action="./insert.php" method="post">
+				<table width="100%" border="1">
+				  <tr>
+					  <th>*아이디</th>
+						<td>
+						   <input type="text" placeholder="ID 6자~10자" size="10" maxlength="10" minlength="6" name="id" required>
+							 <input type="button" value="아이디 중복확인" onClick="alert('ID 체크')">
+						</td>
+					</tr>
+					<tr>
+					  <th>*비밀번호</th>
+						<td>
+						   <input type="password" size="10" maxlength="10" name="passwd" required>
+						</td>
+					</tr>
+					<tr>
+					  <th>*비밀번호 확인</th>
+						<td>
+						   <input type="password" size="10" maxlength="10" name="passwd_confirm" required>
+						</td>
+					</tr>
+					<tr>
+					  <th>*이름</th>
+						<td>
+						   <input type="text" size="10" maxlength="10" name="name" required>
+						</td>
+					</tr>
+					<tr>
+					  <th>성별</th>
+						<td>
+						   <input type="radio" value="M" name="sex" checked>남
+							 <input type="radio" value="W" name="sex">여
+						</td>
+					</tr>
+					<tr>
+					  <th>휴대전화</th>
+						<td>
+						   <select name="phone1">
+									<option value=''>선택</option>
+									<option value='010'>010</option>
+									<option value='02'>02</option>
+									<option value='053'>053</option>
+							 </select>
+							 - <input type="text" size="4" maxlength="4" minlength="3" name="phone2">
+							 - <input type="text" size="4" maxlength="4" name="phone3">
+						</td>
+					</tr>
+					<tr>
+					  <th>주소</th>
+						<td>
+						   <input type="text" size="50" maxlength="90" name="address">
+						</td>
+					</tr>
+					<tr>
+					  <th>처리</th>
+						<td>
+						   <input type="submit" value="정보등록">
+							 <input type="reset" value="다시작성">
+						</td>
+					</tr>
+				</table>
+		 </form>
+		 
+  </body>
+</html>

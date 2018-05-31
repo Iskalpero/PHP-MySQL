@@ -2,11 +2,12 @@
 	
 	session_start();
 
-  $connect = mysqli_connect("localhost","root","12345");
+   $connect = mysqli_connect("localhost","root","12345");
     mysqli_select_db($connect,"iothome");
  
 	 $id=$_POST['id'];
 	 $passwd=$_POST['passwd'];
+	 
  
     $sql = "select * from member ";
     $sql = $sql."where id='$id'";
@@ -34,7 +35,9 @@
 				exit;
 			}
 			else{
+				$name = $show['name'];
 				$_SESSION['userid'] = $id;
+				$_SESSION['username'] = $name;
 			}
 	}
 
@@ -45,7 +48,7 @@
 ?>
 <script>
 	alert("<?php echo $id; ?> 님, 로그인 되었습니다.");
-	top.location.href = 'http://127.0.0.11/exphp/0328/index.php';
+	top.location.href = 'http://127.0.0.11/exphp/iothome/index.php';
 </script>
 
 
