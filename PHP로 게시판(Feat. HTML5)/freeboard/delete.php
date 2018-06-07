@@ -14,7 +14,7 @@
 
    // $passwd : 사용자가 passwd_form.php 화면에서 입력한 값 
    // $row[passwd] : DB에 들어있는 값 
-   if ($passwd != $row['passwd'] and $userid != "admin")   
+   if ($passwd != $row['passwd'] and $userid != "asdf")   
   // 관리자가 아니고 비밀번호가 틀리면
    {
       echo("
@@ -30,9 +30,9 @@
       $sql = "delete from freeboard where num = $num";
       //mysqli_query($sql, $connect);
 	  mysqli_query($connect, $sql);
-
+	
       mysqli_close($connect);
-      Header("Location:list.php?page=$page");
+      Header("Location:board.php?page=$page");
    }
 
 ?>

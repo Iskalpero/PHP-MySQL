@@ -65,7 +65,7 @@
 	mysqli_query($connect, $sql);
    mysqli_close();                // DB 연결 끊기
    
-   Header("Location:list.php");  // list.php 로 이동합니다.
+   Header("Location:index.php");  // list.php 로 이동합니다.
 ?>
 
    

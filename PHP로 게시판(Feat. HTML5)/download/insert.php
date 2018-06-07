@@ -145,11 +145,11 @@
      // 레코드 삽입 명령
       $sql = "insert into down_board
               (depth, ord, id, name, subject,";
-      $sql .= "content, regist_day, hit, ip, filename, filesize) ";
+      $sql .= "content, regist_day, hit, ip, filename, filesize, chk) ";
       $sql .= "values($depth, $ord, '$userid', '$username', 
                       '$subject',";
       $sql .= "'$content', '$regist_day', 0, '$ip', '$upfile_name', 
-               '$filesize')";    
+               '$filesize', 1 )";    
       mysqli_query($connect, $sql);  // $sql 에 저장된 명령 실행
 
       // 최근 auto_increment 필드(num) 값 가져오기
@@ -181,10 +181,10 @@
 
       $sql = "insert into down_board(group_num, depth, ord, id, name,
               subject,";
-      $sql .= "content, regist_day, hit, ip, filename, filesize) ";
+      $sql .= "content, regist_day, hit, ip, filename, filesize, chk) ";
       $sql .= "values($group_num, $depth, $ord, '$userid', '$username',
                       '$subject',";
-      $sql .= "'$content', '$regist_day', 0, '$ip', '$upfile_name','$filesize')";
+      $sql .= "'$content', '$regist_day', 0, '$ip', '$upfile_name','$filesize', 1)";
 
       mysqli_query($connect, $sql);  // $sql 에 저장된 명령 실행
    }

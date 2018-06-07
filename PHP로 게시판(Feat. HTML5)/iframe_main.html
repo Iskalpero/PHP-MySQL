@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> ㅁ </title>
+		<style>
+		.slider_section{
+			/*
+			display:flex;
+			justify-content:space-between;
+			*/
+			align-items:center;
+			margin:0px;
+			padding:0px;
+			order:3;
+			width:100%;
+			height:900px;
+			border:0px;
+			/*height:60rem;*/
+			background:url(./images/main-1.png) center center no-repeat;
+			animation: rotate 4s infinite, background 4s infinite alternate;
+
+			}
+
+			@keyframes rotate{
+				from {
+						transform: perspective(900px) rotateX(0deg) rotateY(0deg);
+					}
+				50% {
+						transform: perspective(900px) rotateX(0deg) rotateY(0deg);
+					}
+				to {
+						transform: perspective(900px) rotateX(0deg) rotateY(0deg);
+					}
+				
+			}
+
+
+			@keyframes background{
+				from {
+						background:url(./images/main-1.png) center center no-repeat;
+					}
+				50% {
+						background:url(./images/main-3.png) center center no-repeat;
+					}
+				to {
+						background:url(./images/Backmain-4.png) center center no-repeat;
+					}
+				
+			}		
+		</style>	
+	<head>
+	<body>
+		<div class = "slider_section">
+		</div>
+	</body>
+</html>

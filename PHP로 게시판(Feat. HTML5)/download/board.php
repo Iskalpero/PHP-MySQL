@@ -1,22 +1,17 @@
 <?php
    $scale = 5;   // 한 화면에 표시되는 글 수
 	
+   $page = $_GET['page'];
+   
    include "../dbcon.php";
-   
-   $find = $_POST['find'];
-   
-   // $find : subject, name, content 중 하나의 값을 가짐
-   // $search : 입력된 문자열
-   $search = $_POST['search'];
-   $sql = "select * from freeboard where $find like '%$search%'
-			   order by num desc";
-   
+
+   $sql = "select * from freeboard order by num desc";
    $result = mysqli_query($connect , $sql);
    $total_record = mysqli_num_rows($result);
-   
-    // 전체 페이지 수($total_page) 계산 
+
+   // 전체 페이지 수($total_page) 계산 
    if ($total_record % $scale == 0)     
-      $total_page = floor($total_record/$scale);     
+      $total_page = floor($total_record/$scale);      
    else
       $total_page = floor($total_record/$scale) + 1; 
  
@@ -25,9 +20,9 @@
  
    // 표시할 페이지($page)에 따라 $start 계산  
    $start = ($page - 1) * $scale;      
-   
-    $number = $total_record - $start;
-   
+
+   $number = $total_record - $start;
+
    
 ?>
 <!DOCTYPE HTML>
@@ -53,6 +48,7 @@
 							<tr>
 								<th>번호</th>
 								<th>제목</th>
+								<th>파일</th>
 								<th>글쓴이</th>
 								<th>작성일</th>
 								<th>조회수</th>
@@ -91,16 +87,12 @@
 				<div class="content_row_2">
 					<div class="search_box">
 						<form method=post action="search.php">
-							
-							<div class="search_select_box">
-								<select class="search_select_list" name = "find">
+							<input type="text" size=10 name="search" class="search_window" placeholder="검색어">
+							<select class="search_select_list" name = "find">
 									  <option value="subject">제목에서</option>
 									  <option value="content">본문에서</option>
 									  <option value="name">글쓴이에서</option>
-								</select>
-							</div>
-							<input type="text" size=10 name="gallery_search_window" class="search_window" placeholder="검색어">
-							
+							</select>
 							<input type="image" src="img/i_search.gif" 
 									align=absmiddle border=0>
 						</form>

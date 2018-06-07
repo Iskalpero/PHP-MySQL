@@ -1,0 +1,236 @@
+
+img {
+    max-width: 100%;
+}
+
+/*--end reset--*/
+
+
+body {
+    background: url(../images/banner.jpg) no-repeat center;
+    font-family: 'Mukta Mahee', sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.content-w3ls {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    justify-content: center;
+}
+
+.agileits-grid {
+    max-width: 500px;
+    margin: 0 5vw;
+    padding: 3.5vw;
+    box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    background: rgba(249, 249, 249, 0.24);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.49);
+}
+
+.content-top-agile,
+.content-bottom,
+.wthree-field {
+    flex-basis: 100%;
+}
+
+.content-top-agile {
+    padding: 1em;
+    background: #073374;
+    border-radius: 20px;
+}
+
+.content-top-agile h2 {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+.field_w3ls {
+    background: #fff;
+}
+
+h1.title-agile {
+    font-size: 2.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+    margin: 1em 1vw 1em;
+    text-align: center;
+    font-family: 'Mukta Mahee', sans-serif;
+}
+
+.content-w3ls ul li {
+    display: inline-block;
+}
+
+/* form style  */
+
+form .field-group {
+    display: flex;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+}
+
+.field-icon {
+    float: right;
+    margin-left: -30px;
+    margin-top: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.field_w3ls {
+    background: #ffffff;
+    border-radius: 15px;
+    margin: 2em 0;
+}
+
+.field-group input:last-child {
+    border-bottom: 1px solid #c2c5ca;
+}
+
+.field-group input {
+    padding: 18px 15px;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Mukta Mahee', sans-serif;
+    outline: none;
+}
+
+.wthree-field input[type="submit"], input[type="button"] {
+    background: #073374;
+    width: 48%;
+    border: none;
+    color: #fff;
+    padding: 12px 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Mukta Mahee', sans-serif;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.wthree-field input[type="submit"]:hover, input[type="button"]:hover {
+    background: #000;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+
+/* //content */
+
+@media (max-width: 1920px) {
+    h1 {
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-top-agile {
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content-w3ls {
+        margin: 3em 1em;
+    }
+    h1.title-agile {
+        font-size: 2.3em;
+        letter-spacing: 3px;
+    }
+    label.switch {
+        padding-left: 4em;
+    }
+    .content-top-agile {
+        padding: 1.5em;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    h1.title-agile {
+        font-size: 2.2em;
+    }
+    ul.list-login li:nth-child(2),
+    li.switch-agileits {
+        float: none;
+    }
+    ul.list-login li:nth-child(2) {
+        margin-top: 1em;
+    }
+    form .field-group .wthree-field {
+        flex: 3 40%;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    h1.title-agile {
+        font-size: 2.1em;
+    }
+    .content-w3ls {
+        margin: 2em 1em;
+    }
+    .wthree-field input[type="submit"] {
+        padding: 7px 15px;
+    }
+    .content-top-agile {
+        padding: 1.3em;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h1.title-agile {
+        font-size: 2em;
+    }
+    .content-bottom {
+        padding: 1em;
+    }
+    .field_w3ls {
+        margin: 1em 0;
+    }
+    .copyright p {
+        letter-spacing: 0.5px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1.title-agile {
+        font-size: 1.7em;
+    }
+    .content-bottom {
+        padding: 2em 1.5em;
+    }
+    .content-top-agile h2 {
+        font-size: 1.2em;
+    }
+    .content-bottom {
+        padding: 1em 0em;
+    }
+    .content-top-agile {
+        padding: 1em;
+    }
+}
+

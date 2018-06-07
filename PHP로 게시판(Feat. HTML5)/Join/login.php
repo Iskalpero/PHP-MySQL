@@ -2,7 +2,7 @@
 	
 	session_start();
 
-	$connect = mysqli_connect("localhost","root","12345");
+   $connect = mysqli_connect("localhost","root","12345");
     mysqli_select_db($connect,"iothome");
  
 	 $id=$_POST['id'];
@@ -18,7 +18,7 @@
 				echo "
 					<script>
 						alert(\"존재하지 않는 ID입니다.\");
-						window.location.replace('login.html');
+						window.location.replace('login_form.html');
 					  </script>";
 				exit;
 	} 	
@@ -30,7 +30,7 @@
 			if($passwd != $show['passwd']){
 				echo"<script>
 						alert(\"비밀번호가 일치하지 않습니다.\");
-						window.location.replace('login.html');
+						window.location.replace('login_form.html');
 					</script>";
 				exit;
 			}
@@ -40,7 +40,7 @@
 				$_SESSION['username'] = $name;
 			}
 	}
-	
+
     mysqli_close($connect);
 		
 	// 레코드를 삽입하고 다시 mysql_client2_array.php 로 돌아감
@@ -48,7 +48,7 @@
 ?>
 <script>
 	alert("<?php echo $id; ?> 님, 로그인 되었습니다.");
-	top.location.href = 'http://127.0.0.11/Board_Test/index.php';
+	top.location.href = 'http://127.0.0.11/exphp/iothome/index.php';
 </script>
 
 

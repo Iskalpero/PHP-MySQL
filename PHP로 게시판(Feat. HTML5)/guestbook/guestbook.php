@@ -3,14 +3,14 @@
 <html lang="ko">
 	<head>
 		<meta charset="utf-8">
+		<link href= "../css/styleGuest.css", rel = "stylesheet" type="text/css">
 		<title>방명록</title>	
 	</head>
 	
 	<body>
-		
 		<h1> 방 명 록 </h1>
 		<form name="guestbook" action="./insert.php" method="post">
-			<table width="100%" border="1">
+			<table width="100%" border="0" id="table_top">
 				<tr>
 					<th><span style="color:red">*</span>이름</th>
 					<td>
@@ -27,7 +27,7 @@
 					<th>내용</th>
 					<td>
 						<div >
-							<textarea name="content" cols="125" rows="4" width="100%" required placeholder="내용을 입력해 주세요" style="width:100%"></textarea>
+							<textarea name="content" cols="50" rows="4" width="100%" required placeholder="내용을 입력해 주세요" style="width:100%"></textarea>
 					</td>
 				</tr>
 				<tr>
@@ -38,7 +38,7 @@
 					</td>
 				</tr>
 			</table>
-			<table>
+			<table id="list" >
 				<tr>
 					<?php
 											
@@ -116,7 +116,7 @@
 									</td>
 								   </tr>
 							
-									<tr height =1 bgcolor=#5AB2C8>
+									<tr height =14 bgcolor=#5AB2C8>
 										<td colspan=2></td>
 									</tr>
 									<tr>

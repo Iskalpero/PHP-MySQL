@@ -32,7 +32,7 @@
 	  $result_reply_check = mysqli_query($connect, $sql);
 	  $reply_check = mysqli_fetch_array($result_reply_check);
 	  if($reply_check){
-		  $sql = "update down_board set subject = '삭제된 원글입니다.', id =null, name =null, content =null, filename =null, ip = null where num = $num";
+		  $sql = "update down_board set subject = '삭제된 원글입니다.', id =null, name =null, content =null, filename =null, ip = null, chk = 0 where num = $num";
 		  mysqli_query($connect, $sql);
 	  }
 	  else{

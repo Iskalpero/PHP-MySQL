@@ -25,9 +25,17 @@
    }
    else
    {
-      $sql = "delete from qna_board where num = $num";
-      //mysql_query($sql, $connect);
-	  mysqli_query($connect, $sql);
+      $sql_reply_check = "select * from qna_board where group_num = $num && num != $num";
+	  $result_reply_check = mysqli_query($connect, $sql);
+	  $reply_check = mysqli_fetch_array($result_reply_check);
+	  if($reply_check){
+		  $sql = "update qna_board set subject = '삭제된 원글입니다.', id =null, name =null, content =null, ip = null, chk = 0 where num = $num";
+		  mysqli_query($connect, $sql);
+	  }
+	  else{
+		$sql = "delete from qna_board where num = $num";
+		mysqli_query($connect, $sql);
+	  }
    }
 
    mysqli_close($connect);

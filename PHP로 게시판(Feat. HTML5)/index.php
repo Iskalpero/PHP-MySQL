@@ -1,82 +1,97 @@
 <?php
-	
 	session_start();
-	// 세션 시작
-	
 	
 ?>
-
-
-<table xborder="1" width="90%" align="center">
-
-	<tr><td><img src="images/ban_index.png"></td></tr>
-	<tr>
-		<td>
-			<table xborder="1" width="100%" align="center">
-				<tr>
-					<td>
-						<a href="./callanderex.php" target="main">
-						<img src="images/btn_home.png"></a>
-					</td>
-<?php
-	if($_SESSION['userid']){
-		// userid가 세션에 존재할 경우. 여기서 if는 php분이므로 저렇게 열닫한다. 로그인 -> 로그아웃 변경
-?> 
-					<td>
-						<a href="./logout.php" target="main">
-						<img src="images/btn_logout.png"></a>
-					</td>
-
-<?php
-	}else{ //userid가 존재하지 않을 경우. 로그인 버튼 유지
-?>
-					<td>
-						<a href="./login_form.html" target="main">
-						<img src="images/btn_login.png"></a>
-					</td>
-					<!--<td>
-						<a href="./login_form.html" target="main"><img src="images/btn_login.png"></a>
-					</td>-->
-<?php			
-	} // else문 종료.
-?>
-
-<?php
-	if($_SESSION['userid']){ // 회원가입 -> 회원정보 변경.
-?>
-				<td>
-					<a href="./member_mform.php" target="main">
-					<img src="images/btn_modmem.png"></a>
-				</td>
-<?php
-	}else{ // 회원가입 버튼 유지
-?>
-					<td><a href="./member_form.html" target="main"><img src="images/btn_addmem.png"></a></td>
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<link href= "./css/index_style.css", rel = "stylesheet" type="text/css">
+		<title> Index </title>	
+	</head>
+	
+	<body>
+		<div id = "container">
+			<nav id = "top">
+				<section id = "main">
+					<a href = "./index.php"><img src = "./images/main_02.gif"></a>
+				</section>
+			</nav>
+			<section id = "menu">
+				<ul>
+					<?php
+						if($_SESSION['userid']){
+						// userid가 세션에 존재할 경우. 여기서 if는 php분이므로 저렇게 열닫한다. 로그인 -> 로그아웃 변경
+					?>
+					<li>
+						<a href="./logout.php" target="main">로그아웃</a>
+						<ul>
+							<li><a href="./join/mjoin.php" target="main">정보수정</a></li>
+							<li><a href="#">예시</a></li>
+							<li><a href="#">예시</a></li>
+						</ul>
+					</li>
+					<?php
+						}else{
+					?>
+						<li>
+							<a href="./login.html" target="main">로그인</a>
+							<ul>
+								<li><a href="./join/join.php" target="main">회원가입</a></li>
+							</ul>
+						</li>
+					<?php
+						}
+					?>
 					
-<?php
-		
-	} // else문 종료.
-?> 
-					<td><a href="./guestbook/guestbook.php" target="main"><img src="images/btn_vbook.png"></a></td>
-					<td><a href="./freeboard/list.php" target="main"><img src="images/btn_board.png"></a></td>
-					<td><a href="./notice/list.php" target="main"><img src="images/btn_notice.png"></a></td>
-					<td><a href="./qna/list.php" target="main"><img src="images/btn_qna.png"></a></td>
-					<td><a href="./download/list.php" target="main"><img src="images/btn_dboard.png"></a></td>
-					<td><a href="./survey/survey.php" target="main"><img src="images/btn_qboard.png"></a></td>
-				</tr>			
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<!--
-			<iframe src="http://jafa.or.kr" target="main" name="main" width="100%" height="400px" frameborder="0">
-			-->
-			<iframe src="./callanderex.php" target="main" name="main" width="100%" height="400px">
-			</iframe>
-		</td>
-	</tr>
-
-
-</table>
-
+					<li>
+						<a href="./freeboard/board.php" target="main">커뮤니티</a>
+						<ul>
+							<li><a href="./freeboard/board.php" target="main">자유게시판</a></li>
+							<li><a href="./guestbook/guestbook.php" target="main">방명록</a></li>
+							<li><a href="./download/list.php" target="main">자료실</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="./notice/list.php" target="main">공지사항</a>
+						<ul>
+							<li><a href="#">예시</a></li>
+							<li><a href="#">예시</a></li>
+							<li><a href="#">예시</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="./qna/list.php" target="main">FAQ</a>
+						<ul>
+							<li><a href="#">예시</a></li>
+							<li><a href="#">예시</a></li>
+							<li><a href="#">예시</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="./survey/survey.php" target="main">설문조사</a>
+						<ul>
+							<li><a href="#">예시</a></li>
+							<li><a href="#">예시</a></li>
+							<li><a href="#">예시</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="./Ap/index.html" target="main">프로그래밍 능력</a>
+						<ul>
+							<li><a href="#">예시</a></li>
+							<li><a href="#">예시</a></li>
+							<li><a href="#">예시</a></li>
+						</ul>
+					</li>
+				</ul>			
+			</section>
+			<section>
+				<iframe src="./iframe_main.html" target="main" name="main">
+				</iframe>
+				
+			</section>
+		</div>
+	</body>
+</html>
